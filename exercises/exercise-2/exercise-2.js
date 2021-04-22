@@ -73,18 +73,27 @@ let hogwarts = [
 
 let [ gryff1, gryff2, gryff3, , , , , , gryff4, gryff5 ] = hogwarts;
 
-function houseGryffindor(house) {
+function houseGryffindor(house) {  
   house.forEach(person => {
-    if(person.house == "Gryffindor") console.log(person.firstName);
+    if(person.house === "Gryffindor") console.log(`${person.firstName} ${person.lastName}`);
   });
 }
 houseGryffindor(hogwarts);
 
 function teacherHasPet(house) {
   house.forEach(person => {
-    if(person.occupation == "Teacher" && person.pet != null) {
-      console.log(person.firstName);
+    if(person.occupation === "Teacher" && person.pet !== null) {
+      console.log(`${person.firstName} ${person.lastName}`);
     }
-  });
+  }); 
 }
 teacherHasPet(hogwarts);
+
+
+// console.log(`
+// ${gryff1.firstName} ${gryff1.lastName}
+// ${gryff2.firstName} ${gryff2.lastName}
+// ${gryff3.firstName} ${gryff3.lastName}
+// ${gryff4.firstName} ${gryff4.lastName}
+// ${gryff5.firstName} ${gryff5.lastName}
+// `);
